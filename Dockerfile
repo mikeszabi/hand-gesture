@@ -21,15 +21,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install pip -U \
-    && pip install -U onnx \
-    && pip install -U onnx-simplifier \
-    && python3 -m pip install -U onnx_graphsurgeon --index-url https://pypi.ngc.nvidia.com \
-    && pip install -U simple_onnx_processing_tools \
-    && pip install tensorflow \
     && pip install mediapipe --no-deps \
     && pip install opencv-python \
-    && pip install scikit-learn \
-    && pip install matplotlib \
     && pip install --upgrade attrs
 
 ENV USERNAME=user
